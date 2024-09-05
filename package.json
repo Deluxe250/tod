@@ -60,13 +60,11 @@
   "lint-staged": {
     "./src/**/*.{ts,html}": [
       "npm run prettier",
-      "npm run lint",
-      "git add"
+      "npm run lint"
     ],
     "./src/**/*.{css,scss}": [
       "npm run prettier",
-      "npm run stylelint",
-      "git add"
+      "npm run stylelint"
     ]
   }
 }
