@@ -9,7 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
-    "prettier:fix": "prettier --write .",
+    "prettier:fix": "prettier --write",
     "stylelint:fix": "stylelint --fix --config .stylelintrc --syntax scss",
     "prepare": "husky"
   },
