@@ -58,12 +58,14 @@
   },
   "lint-staged": {
     "./src/**/*.{ts,html}": [
+      "eslint --fix",
       "prettier --write",
-      "eslint --fix"
+      "git add"
     ],
     "./src/**/*.scss": [
+      "stylelint --config .stylelintrc --syntax scss --fix",
       "prettier --write",
-      "stylelint --config .stylelintrc --syntax scss --fix"
+      "git add"
     ]
   }
 }
