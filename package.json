@@ -57,12 +57,12 @@
     "typescript-eslint": "8.1.0"
   },
   "lint-staged": {
-    "./src/**/*.{ts,html}": [
+    "./src/**/*.{js,ts,html}": [
       "eslint --fix",
       "prettier --write",
       "git add"
     ],
-    "./src/**/*.scss": [
+    "./src/**/*.{css,scss}": [
       "stylelint --config .stylelintrc --syntax scss --fix",
       "prettier --write",
       "git add"
