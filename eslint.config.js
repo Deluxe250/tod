@@ -6,6 +6,7 @@ const angular = require('angular-eslint');
 module.exports = tseslint.config(
   {
     files: ['**/*.ts'],
+    ignores: ['.angular/', '.angular/**/*', '**/*.js'],
     extends: [
       eslint.configs.recommended,
       ...tseslint.configs.recommended,
