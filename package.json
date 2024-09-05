@@ -8,7 +8,9 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "prettier": "npx prettier --write .",
+    "eslint": "eslint --fix",
+    "prettier": "prettier --write .",
+    "stylelint": "stylelint --config .stylelintrc --syntax scss --fix",
     "prepare": "husky"
   },
   "private": true,
@@ -57,14 +59,14 @@
     "typescript-eslint": "8.1.0"
   },
   "lint-staged": {
-    "./src/**/*.{js,ts,html}": [
-      "eslint --fix",
-      "prettier --write",
+    "./src/**/*.{ts,html}": [
+      "npm run eslint",
+      "npm run prettier",
       "git add"
     ],
     "./src/**/*.{css,scss}": [
-      "stylelint --config .stylelintrc --syntax scss --fix",
-      "prettier --write",
+      "npm run stylelint",
+      "npm run prettier",
       "git add"
     ]
   }
