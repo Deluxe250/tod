@@ -8,6 +8,7 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint --fix",
+    "eslint": "esint --fix",
     "prettier": "prettier --write .",
     "stylelint": "stylelint --fix --config .stylelintrc --syntax scss",
     "prepare": "husky"
@@ -60,7 +61,7 @@
   "lint-staged": {
     "./src/**/*.{ts,html}": [
       "npm run prettier",
-      "npm run lint"
+      "npm run eslint"
     ],
     "./src/**/*.{css,scss}": [
       "npm run prettier",
