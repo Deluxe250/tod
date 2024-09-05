@@ -7,10 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "lint": "ng lint --fix",
-    "eslint": "esint --fix",
-    "prettier": "prettier --write .",
-    "stylelint": "stylelint --fix --config .stylelintrc --syntax scss",
+    "lint": "ng lint",
+    "eslint:fix": "ng int --fix",
+    "prettier:fix": "prettier --write .",
+    "stylelint:fix": "stylelint --fix --config .stylelintrc --syntax scss",
     "prepare": "husky"
   },
   "private": true,
@@ -60,12 +60,12 @@
   },
   "lint-staged": {
     "./src/**/*.{ts,html}": [
-      "npm run prettier",
-      "npm run eslint"
+      "npm run prettier:fix",
+      "npm run eslint:fix"
     ],
     "./src/**/*.{css,scss}": [
-      "npm run prettier",
-      "npm run stylelint"
+      "npm run prettier:fix",
+      "npm run stylelint:fix"
     ]
   }
 }
